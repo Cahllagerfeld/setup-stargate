@@ -31,3 +31,6 @@ const cliOptionsRaw: any = program.opts();
 const options: cliOptions = cliOptionsRaw;
 
 setup(options);
+
+export * from "./setup";
+export * from "./options.interface";
