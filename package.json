@@ -1,7 +1,7 @@
 {
-  "name": "setup-stargate",
+  "name": "@cahllagerfeld/setup-stargate",
   "version": "1.0.0",
-  "description": "",
+  "description": "Setup Local Stargate Container",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
@@ -16,6 +16,12 @@
   "keywords": [
     "stargage"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@Cahllagerfeld"
+  },
+  "repository": {
+    "url": "git://github.com/Cahllagerfeld/setup-stargate.git"
+  },
   "author": "Cahllagerfeld",
   "license": "MIT",
   "devDependencies": {
