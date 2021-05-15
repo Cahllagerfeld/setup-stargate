@@ -1,4 +1,4 @@
-export interface cliOptions {
+export interface setupStargateOptions {
   username: string;
   password: string;
   authUrl: string;
