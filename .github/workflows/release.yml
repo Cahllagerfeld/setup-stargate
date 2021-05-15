@@ -36,8 +36,8 @@ jobs:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
           scope: '@Cahllagerfeld'
-      - run: npm ci
-      - run: npm run build
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        - run: npm ci
+        - run: npm run build
+        - run: npm publish
+          env:
+           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
