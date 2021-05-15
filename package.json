@@ -1,9 +1,13 @@
 {
   "name": "@cahllagerfeld/setup-stargate",
-  "version": "0.3.3",
+  "version": "0.3.2",
   "description": "Setup Local Stargate Container",
   "main": "dist/index.js",
   "scripts": {
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major",
     "prepare": "husky install",
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
@@ -39,8 +43,9 @@
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
-    "prettier": "^2.3.0",
     "husky": "^6.0.0",
+    "prettier": "^2.3.0",
+    "standard-version": "^9.3.0",
     "typescript": "^4.2.4"
   },
   "dependencies": {
