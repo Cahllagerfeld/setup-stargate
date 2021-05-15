@@ -1,10 +1,6 @@
 {
   "name": "@cahllagerfeld/setup-stargate",
-<<<<<<< HEAD
   "version": "0.3.1",
-=======
-  "version": "0.2.0",
->>>>>>> ce0394213821f11f13a8dc3f189a61ce105dd75a
   "description": "Setup Local Stargate Container",
   "main": "dist/index.js",
   "scripts": {
