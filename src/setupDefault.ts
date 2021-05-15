@@ -1,6 +1,5 @@
 import axios from "axios";
 import chalk from "chalk";
-import figlet from "figlet";
 import { setupStargateOptions } from "./options.interface";
 
 export async function setupDefault(options: setupStargateOptions) {
@@ -8,9 +7,6 @@ export async function setupDefault(options: setupStargateOptions) {
     console.log(chalk.red("please define keyspace name"));
     return;
   }
-  console.log(
-    chalk.cyan(figlet.textSync("setup-stargate", { horizontalLayout: "full" }))
-  );
   try {
     console.log(chalk.cyan("Initialization started"));
     const response = await axios.post(options.authUrl, {
