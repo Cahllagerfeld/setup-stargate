@@ -5,6 +5,7 @@ import clear from 'clear';
 import figlet from 'figlet';
 import { setDefaults, setupDefault } from './setupDefault';
 import { setupAdvanced } from './setupAdvanced';
+import { deleteKeyspace } from './deleteKeyspace';
 const program = new Command();
 
 clear();
@@ -20,12 +21,21 @@ program
   });
 
 program
-  .command('default <keyspace> [username] [password] [authUrl] [namespaceUrl]')
-  .alias('d')
+  .command('create <keyspace> [username] [password] [authUrl] [namespaceUrl]')
+  .alias('c')
   .description('Default Setup')
   .action(async (keyspace, username, password, authUrl, namespaceUrl) => {
     const options = setDefaults(username, password, authUrl, namespaceUrl, keyspace);
     await setupDefault(options);
+  });
+
+program
+  .command('delete <keyspace> [username] [password] [authUrl] [namespaceUrl]')
+  .alias('d')
+  .description('delete keyspace')
+  .action(async (keyspace, username, password, authUrl, namespaceUrl) => {
+    const options = setDefaults(username, password, authUrl, namespaceUrl, keyspace);
+    await deleteKeyspace(options);
   });
 
 program.parse(process.argv);
@@ -33,6 +43,3 @@ program.parse(process.argv);
 if (process.argv.length < 3) {
   program.outputHelp();
 }
-
-export * from './setupDefault';
-export * from './options.interface';
