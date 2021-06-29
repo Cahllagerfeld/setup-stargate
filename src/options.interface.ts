@@ -1,4 +1,4 @@
-export interface setupStargateOptions {
+export interface StargateOptions {
   username: string;
   password: string;
   authUrl: string;

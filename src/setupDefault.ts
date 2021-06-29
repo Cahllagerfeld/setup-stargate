@@ -1,8 +1,8 @@
 import axios from 'axios';
 import chalk from 'chalk';
-import { setupStargateOptions } from './options.interface';
+import { StargateOptions } from './options.interface';
 
-export async function setupDefault(options: setupStargateOptions): Promise<void> {
+export async function setupDefault(options: StargateOptions): Promise<void> {
   if (!options.keyspace) {
     console.log(chalk.red('please define keyspace name'));
     return;
@@ -38,12 +38,12 @@ export function setDefaults(
   authUrl: string | undefined,
   namespaceUrl: string | undefined,
   keyspace: string,
-): setupStargateOptions {
+): StargateOptions {
   return {
     username: username ? username : 'cassandra',
     password: password ? password : 'cassandra',
     authUrl: authUrl ? authUrl : 'http://localhost:8081/v1/auth',
     namespaceUrl: namespaceUrl ? namespaceUrl : 'http://localhost:8082/v2/schemas/namespaces',
     keyspace: keyspace,
-  } as setupStargateOptions;
+  } as StargateOptions;
 }
